@@ -36,14 +36,7 @@ module.exports = {
 	},
 
 	mode : 'development',	
-
-	devServer : {
-		contentBase : path.join( __dirname, 'bin' ),
-		publicPath: path.join(__dirname, 'bin'),
-		compress : true,
-		port : 8080
-	},
-
+	
 	plugins : [
 		new WriteFilePlugin()
 	],

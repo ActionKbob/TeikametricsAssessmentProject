@@ -1,3 +1,8 @@
+.btn
+{
+	cursor : pointer;
+}
+
 .btn-big
 {
 	border-radius : 3px;
@@ -6,4 +11,85 @@
 	background-color : $blue-button-bg;
 	width : 175px;
 	height : 50px;
+
+	&.filled
+	{
+		color : white;
+		background-color : #50C1DC;
+	}
+}
+
+.btn-timeline-colored
+{
+	transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+
+	&.yearly-color
+	{
+		background-color : #F0F0FA;
+		border : 1px solid #9498D3;
+		color : #666DBC;
+	}
+}
+
+.switch
+{
+
+	position: relative;
+	display: inline-block;
+	width: 64px;
+	height: 30px;
+	top : 10px;
+	margin : 0 0.5rem;
+
+	input
+	{
+		display : none;
+	}
+
+	input:checked + .slider 
+	{
+	  background-color : $yearlyColor;
+	}
+
+	input:focus + .slider 
+	{
+	  box-shadow : 0 0 1px $yearlyColor;
+	}
+
+	input:checked + .slider:before 
+	{
+	  -webkit-transform : translateX( 33px );
+	  -ms-transform : translateX( 33px );
+	  transform : translateX( 33px );
+	}
+
+	.slider
+	{
+		position : absolute;
+		cursor : pointer;
+		top : 0;
+		left : 0;
+		right : 0;
+		bottom : 0;
+		background-color : $monthlyColor;
+		-webkit-transition : .4s;
+		transition : .4s;
+		border-radius : 34px;
+
+		&:before
+		{
+			position : absolute;
+			content : "";
+			height : 27px;
+			width : 27px;
+			left : 2px;
+			bottom : 2px;
+			background-color : white;
+			-webkit-transition : .4s;
+			transition : .4s;
+			border-radius : 50%;
+		}
+	}
+
+
 }

@@ -5,9 +5,17 @@
 	a, a:hover, a:visited
 	{
 		font-size : 0.75rem;
-		color : inherit;
-		text-decoration : none;
-		margin-left : 3rem;
+		margin-bottom : 1.5rem;
+
+		@include media-breakpoint-up( lg )
+		{
+			margin-left : 3rem;
+			margin-bottom : 0;
+		}
 	}
 
+	.copywrite
+	{
+		font-size : 12px;
+	}
 }

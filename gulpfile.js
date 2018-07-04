@@ -54,7 +54,10 @@ gulp.task( 'webpack-dev-server', function( callback  ){
 
 	new webpackDevServer( compiler, {
 		contentBase : './bin',
-		publicPath : './bin/resources/scripts'
+		publicPath : './bin/resources/scripts',
+		compress : true,
+		port : 8080,
+		historyApiFallback : true,
 	} ).listen( 8080, 'localhost', function( err ) {
 		if( err ) throw new gutil.PluginError("webpack-dev-server", err);
 	
@@ -76,7 +79,7 @@ gulp.task( 'styles', function(){
 
 	return  gulp.src( config.styles.src + 'main.scss' )
 				.pipe( sourcemaps.init() )
-				.pipe( sass() )
+				.pipe( sass( { outputStyle : "compressed" } ) )
 				.pipe( sourcemaps.write() )
 				.pipe( gulp.dest( config.styles.dest ) );
 

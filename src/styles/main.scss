@@ -1,6 +1,5 @@
 // Bootstrap Imports
-@import 'libs/bootstrap/bootstrap-grid';
-@import 'libs/bootstrap/utilities/spacing';
+@import 'libs/bootstrap/bootstrap';
 
 // Custom Style Imports
 @import 'variables';
@@ -9,3 +8,7 @@
 @import 'typography';
 @import 'buttons';
 @import 'pricing';
+@import 'timeline';
+@import 'included-in-plan';
+@import 'sellers';
+@import 'sitemap';

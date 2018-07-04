@@ -28,6 +28,24 @@
 					border-radius : 0px 5px 0px 0px;
 				}
 			}
+
+			&:not( :first-child )
+			{
+				.pricing-option-label
+				{
+					border-left : 1px solid #40ABC5;
+
+					&.yearly-color
+					{
+						border-left : 1px solid #5359A7;
+					}
+				}
+
+				.pricing-option-content
+				{
+					border-left : 1px solid $border-grey;
+				}
+			}
 		}
 
 		.pricing-option-label
@@ -35,23 +53,30 @@
 			height : 3.5rem;
 			color : white;
 			border-radius : 5px 5px 0px 0px;
-			
-			@include media-breakpoint-up( lg )
+			background-color : $monthlyColor;
+			transition: background-color 0.5s ease, border-left 0.5s ease;
+
+			&.yearly-color
 			{
-				border-radius : 0px 0px 0px 0px;	
+				background-color : $yearlyColor;
 			}
 
-			&.timeline-coloring
+			@include media-breakpoint-up( lg )
 			{
-				background-color : $monthlyColor;
+				border-radius : 0px 0px 0px 0px;
 			}
+
+			
 		}
 
 		.pricing-option-content
 		{
+
+			padding-bottom : 2rem;
+
 			.pricing-option-amount
 			{
-				font-size : 2.65rem;
+				font-size : 3.125rem;
 				margin : 2rem 0 0.5rem 0;
 			}
 		}
@@ -68,6 +93,18 @@
 		{
 			max-width : 12rem;
 			text-align : center;
+		}
+
+		.pricing-option-select
+		{
+			transition: background-color 0.5s ease, border 0.5s ease, color 0.5s ease;
+
+			&.yearly-color
+			{
+				background-color : #F0F0FA;
+				border : 1px solid #9498D3;
+				color : #666DBC;
+			}
 		}
 	}
 

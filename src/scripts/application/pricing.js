@@ -1,7 +1,11 @@
 import React from 'react';
 
-import PricingOptionContainer from './components/pricingOptionContainer';
-import ContactUsBucket from './components/contactUsBucket';
+import TimelineSelect from './components/timelineSelect';
+import PricingOptions from './components/pricingOptions';
+import ContactUs from './components/contactUs';
+import IncludedInPlan from './components/includedInPlan';
+import Sellers from './components/sellers';
+import SiteMap from './components/siteMap';
 
 export default class Pricing extends React.Component
 {
@@ -9,8 +13,12 @@ export default class Pricing extends React.Component
 	{
 		return(
 			<div>
-				<PricingOptionContainer/>
-				<ContactUsBucket/>
+				<TimelineSelect/>
+				<PricingOptions/>
+				<ContactUs/>
+				<IncludedInPlan/>
+				<Sellers/>
+				<SiteMap/>
 			</div>
 		);
 	}

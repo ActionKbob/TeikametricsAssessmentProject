@@ -1,0 +1,13 @@
+.sellers-seperator
+{
+	width : 95px;
+	border-bottom : 3px solid $monthlyColor;
+}
+
+.sellers-grid
+{
+	img
+	{
+		transform: scale( 0.5, 0.5 );
+	}
+}
